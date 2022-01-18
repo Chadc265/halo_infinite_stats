@@ -1,12 +1,12 @@
-This is a python package for pulling and parsing the matchmaking game stats supplied via the halo.infinite API on Autocode.
+This is a python package for pulling and parsing the matchmaking game stats supplied via the halo.infinite API on Autocode. I was curious about how CSR changes are applied to each player in lobbies with massive CSR ranges, so I wrote some code. I figured I would share the package I used to pull/organize the data.
 
 Classes are included to represent various portions of the json responses from matches.list and matches.retrieve in the api. I do most of my analysis in pandas, 
 so I focused on exporting those objects into list[dict]. There is also a command line tool to write them straight to csv if you don't care of having the objects
 themselves.
 
-The dependencies are pands, numpy, and tqdm
+The dependencies are pandas, numpy, and tqdm
 
-The package utilizes configparser to read in three values, so you'll need to set up an .ini file for that. This should contain a section similar to:
+I used configparser to read in three values, so you'll need to set up an .ini file for that. The variable "CONFIG_PATH" will point to the ini file. This should contain a section similar to:
 
 [halo]  
 dev_token: YOUR_AUTOCODE_TOKEN  
