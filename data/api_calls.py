@@ -1,8 +1,6 @@
 import requests
-import configparser
 
 __all__ = [
-    "get_api_token",
     "get_single_match_json",
     "get_match_list_json",
     "get_pvp_matches_played"
@@ -10,10 +8,6 @@ __all__ = [
 
 API_VERSION = "0.3.6"
 
-def get_api_token(config_path: str):
-    config = configparser.ConfigParser()
-    config.read(config_path)
-    return config['halo']['dev_token']
 
 def get_single_match_json(match_id:str, token:str):
     url = f'https://halo.api.stdlib.com/infinite@{API_VERSION}/stats/matches/retrieve/?id={match_id}'

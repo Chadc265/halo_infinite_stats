@@ -12,11 +12,11 @@ __all__ = [
     "matches_to_dict_list"
 ]
 
-def get_offset_array(api_token, gamertag, number_matches = None):
+def get_offset_array(api_token, gamertag, number_matches = -1):
     matches_played = number_matches
-    if matches_played is None:
+    if matches_played < 0:
         matches_played = get_pvp_matches_played(gamertag, api_token)
-
+    matches_played = max(matches_played, 25)
     nice_round_max_matches = 25 * round(matches_played / 25)
     offset_list = np.arange(0,nice_round_max_matches, 25)
     return offset_list
@@ -54,7 +54,7 @@ def get_specified_matches(
         match_result = get_single_match_json(mid, api_token)
         # try:
         match_obj = Match(match_result['data'])
-        if ignore_match_gamertags is not None:
+        if len(ignore_match_gamertags) > 0:
             match_names = [x.gamer_tag for x in match_obj.players]
             if any([x in match_names for x in ignore_match_gamertags]):
                 continue
