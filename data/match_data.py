@@ -24,7 +24,6 @@ def get_offset_array(api_token, gamertag, number_matches = -1):
 def get_match_id_list(offset_list, api_token, gamertag) -> list[str]:
     ret = []
     for o in tqdm(offset_list, desc='match ids', unit='batch'):
-    # for o in [0, 25]:
         match_list = get_match_list_json(gamertag, offset=int(o), token=api_token)
         match_list_obj = MatchListResult(match_list)
         for match in match_list_obj.matches:
@@ -52,7 +51,6 @@ def get_specified_matches(
     match_list = []
     for mid in tqdm(match_id_list, desc='match list', unit='match'):
         match_result = get_single_match_json(mid, api_token)
-        # try:
         match_obj = Match(match_result['data'])
         if len(ignore_match_gamertags) > 0:
             match_names = [x.gamer_tag for x in match_obj.players]

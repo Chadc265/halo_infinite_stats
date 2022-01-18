@@ -1,4 +1,4 @@
-import dateutil.parser as date_parser
+import datetime
 from .player import PlayerMatchStats
 
 class PlaylistData:
@@ -24,7 +24,7 @@ class Match:
         details = data.get('details', {})
         self.mode = details.get('category', {}).get('name', None)
         self.map = details.get('map', {}).get('name', None)
-        self.date_time = date_parser.parse(data.get('played_at', '1970-01-01T00:00:00.000Z'))
+        self.date_time = datetime.datetime.fromisoformat(data.get('played_at', '1970-01-01T00:00:00.000Z')[:-1])
         self.duration_seconds = data.get('duration', {}).get('seconds', 0)
 
         self.playlist = PlaylistData(details.get('playlist', {}))
@@ -38,7 +38,6 @@ class Match:
             if isinstance(player_data, list):
                 for player in player_data:
                     player_obj = PlayerMatchStats(player, self.id)
-                    # print(player_obj.to_dict())
                     player_list.append(player_obj)
             else:
                 player_list.append(PlayerMatchStats(player_data, self.id, gamer_tag=gamer_tag))

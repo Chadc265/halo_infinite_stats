@@ -130,8 +130,6 @@ class PlayerCSRData:
 
 class TeamCSRData:
     def __init__(self, player_csrs:list, team:str):
-        # for x in player_csrs:
-        #     print(x.team, team)
         self.player_csrs = [x for x in player_csrs if x.team == team]
 
     @property
