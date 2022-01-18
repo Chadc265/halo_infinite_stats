@@ -1,0 +1,233 @@
+{
+    "id": "10d9ab25-524e-46aa-9172-5aed7499bd8d",
+    "details": {
+      "category": {
+        "name": "CTF",
+        "asset": {
+          "id": "507191c6-a492-4331-b2ae-a172101eb23e",
+          "version": "ee8c890b-a95f-4154-bac6-0009992d74f6",
+          "thumbnail_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/ugcgamevariants/ctf.jpg"
+        }
+      },
+      "map": {
+        "name": "Aquarius",
+        "asset": {
+          "id": "33c0766c-ef15-48f8-b298-34aba5bff3b4",
+          "version": "1981275f-d570-4d04-ab3b-980e3591a0b5",
+          "thumbnail_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/maps/aquarius.jpg"
+        }
+      },
+      "playlist": {
+        "name": "Ranked Arena",
+        "asset": {
+          "id": "edfef3ac-9cbe-4fa2-b949-8f29deafd483",
+          "version": "812e8daf-a564-4021-92ef-57177817eb46",
+          "thumbnail_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/playlists/ranked-arena.jpg"
+        },
+        "properties": {
+          "queue": "open",
+          "input": "crossplay",
+          "ranked": true
+        }
+      }
+    },
+    "teams": {
+      "enabled": true,
+      "scoring": true
+    },
+    "player": {
+      "team": {
+        "id": 0,
+        "name": "Eagle",
+        "emblem_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/teams/eagle.png"
+      },
+      "stats": {
+        "core": {
+          "summary": {
+            "kills": 32,
+            "deaths": 20,
+            "assists": 8,
+            "betrayals": 0,
+            "suicides": 0,
+            "vehicles": {
+              "destroys": 0,
+              "hijacks": 0
+            },
+            "medals": 11
+          },
+          "damage": {
+            "taken": 5329,
+            "dealt": 8320
+          },
+          "shots": {
+            "fired": 729,
+            "landed": 478,
+            "missed": 251,
+            "accuracy": 65.56927297668038
+          },
+          "rounds": {
+            "won": 1,
+            "lost": 0,
+            "tied": 0
+          },
+          "breakdowns": {
+            "kills": {
+              "melee": 3,
+              "grenades": 1,
+              "headshots": 27,
+              "power_weapons": 0
+            },
+            "assists": {
+              "emp": 0,
+              "driver": 0,
+              "callouts": 0
+            },
+            "medals": [
+              {
+                "id": 622331684,
+                "name": "Double Kill",
+                "count": 4,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/double-kill.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/double-kill.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/double-kill.png"
+                }
+              },
+              {
+                "id": 2758320809,
+                "name": "Marksman",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/marksman.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/marksman.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/marksman.png"
+                }
+              },
+              {
+                "id": 548533137,
+                "name": "Back Smack",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/back-smack.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/back-smack.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/back-smack.png"
+                }
+              },
+              {
+                "id": 3488248720,
+                "name": "Stopped Short",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/stopped-short.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/stopped-short.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/stopped-short.png"
+                }
+              },
+              {
+                "id": 3227840152,
+                "name": "Goal Line Stand",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/goal-line-stand.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/goal-line-stand.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/goal-line-stand.png"
+                }
+              },
+              {
+                "id": 1512363953,
+                "name": "Perfect",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/perfect.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/perfect.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/perfect.png"
+                }
+              },
+              {
+                "id": 3233952928,
+                "name": "Killjoy",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/killjoy.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/killjoy.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/killjoy.png"
+                }
+              },
+              {
+                "id": 2063152177,
+                "name": "Triple Kill",
+                "count": 1,
+                "image_urls": {
+                  "small": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/small/triple-kill.png",
+                  "medium": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/medium/triple-kill.png",
+                  "large": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/medals/large/triple-kill.png"
+                }
+              }
+            ]
+          },
+          "kda": 14.66,
+          "kdr": 1.6,
+          "score": 4185
+        },
+        "mode": {
+          "flags": {
+            "grabs": 5,
+            "steals": 2,
+            "secures": 4,
+            "returns": 2,
+            "possession": {
+              "duration": {
+                "seconds": 10,
+                "human": "00h 00m 10s"
+              }
+            },
+            "captures": {
+              "total": 1,
+              "assists": 1
+            },
+            "kills": {
+              "carriers": 3,
+              "returners": 0,
+              "as": {
+                "carrier": 0,
+                "returner": 0
+              }
+            }
+          }
+        }
+      },
+      "rank": 2,
+      "outcome": "win",
+      "participation": {
+        "joined_in_progress": true,
+        "presence": {
+          "beginning": true,
+          "completion": true
+        }
+      },
+      "progression": {
+        "csr": {
+          "pre_match": {
+            "tier": "Onyx",
+            "value": 1575,
+            "tier_start": 1500,
+            "sub_tier": 0,
+            "tier_image_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/playlist-csrs/onyx.png"
+          },
+          "post_match": {
+            "tier": "Onyx",
+            "value": 1584,
+            "tier_start": 1500,
+            "sub_tier": 0,
+            "tier_image_url": "https://assets.halo.autocode.gg/static/infinite/images/multiplayer/playlist-csrs/onyx.png"
+          }
+        }
+      }
+    },
+    "experience": "arena",
+    "played_at": "2022-01-04T23:03:01.907Z",
+    "duration": {
+      "seconds": 785,
+      "human": "00h 13m 05s"
+    }
+  }

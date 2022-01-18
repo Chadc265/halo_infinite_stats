@@ -1,0 +1,702 @@
+{
+    "data": {
+      "id": "3da8bf20-36dc-41d1-804d-bfff80e14c5e",
+      "details": {
+        "category": {
+          "name": "Slayer",
+          "asset": {
+            "id": "c2d20d44-8606-4669-b894-afae15b3524f",
+            "version": "9eee25fe-39db-493f-ab0d-d95403df66b8",
+            "thumbnail_url": "https://assets.halo.autocode.gg/images/infinite/ugcgamevariants/slayer.png"
+          }
+        },
+        "map": {
+          "name": "Live Fire",
+          "asset": {
+            "id": "b6aca0c7-8ba7-4066-bf91-693571374c3c",
+            "version": "c63ee410-784e-46ae-911e-ab7bc35933b1",
+            "thumbnail_url": "https://assets.halo.autocode.gg/images/infinite/maps/live-fire.png"
+          }
+        },
+        "playlist": {
+          "name": "Ranked Arena",
+          "asset": {
+            "id": "f7f30787-f607-436b-bdec-44c65bc2ecef",
+            "version": "181beffe-d855-47f6-8b31-12df20a2bc83",
+            "thumbnail_url": "https://assets.halo.autocode.gg/images/infinite/playlists/ranked-arena.png"
+          },
+          "properties": {
+            "queue": "solo-duo",
+            "input": "controller",
+            "ranked": true
+          }
+        }
+      },
+      "teams": {
+        "enabled": true,
+        "scoring": true,
+        "details": [
+          {
+            "team": {
+              "id": 0,
+              "name": "Eagle",
+              "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/eagle.png"
+            },
+            "stats": {
+              "core": {
+                "summary": {
+                  "kills": 46,
+                  "deaths": 50,
+                  "assists": 15,
+                  "betrayals": 0,
+                  "suicides": 0,
+                  "vehicles": {
+                    "destroys": 0,
+                    "hijacks": 0
+                  },
+                  "medals": 12
+                },
+                "damage": {
+                  "taken": 15275,
+                  "dealt": 14848
+                },
+                "shots": {
+                  "fired": 1573,
+                  "landed": 757,
+                  "missed": 816,
+                  "accuracy": 48.124602670057214
+                },
+                "rounds": {
+                  "won": 0,
+                  "lost": 1,
+                  "tied": 0
+                },
+                "breakdowns": {
+                  "kills": {
+                    "melee": 4,
+                    "grenades": 2,
+                    "headshots": 35,
+                    "power_weapons": 0
+                  },
+                  "assists": {
+                    "emp": 0,
+                    "driver": 0,
+                    "callouts": 0
+                  }
+                },
+                "kda": 1,
+                "kdr": 0.92,
+                "score": 5350
+              },
+              "mode": null,
+              "extended": null
+            },
+            "rank": 2,
+            "outcome": "loss"
+          },
+          {
+            "team": {
+              "id": 1,
+              "name": "Cobra",
+              "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/cobra.png"
+            },
+            "stats": {
+              "core": {
+                "summary": {
+                  "kills": 50,
+                  "deaths": 46,
+                  "assists": 25,
+                  "betrayals": 0,
+                  "suicides": 0,
+                  "vehicles": {
+                    "destroys": 0,
+                    "hijacks": 0
+                  },
+                  "medals": 16
+                },
+                "damage": {
+                  "taken": 15160,
+                  "dealt": 14953
+                },
+                "shots": {
+                  "fired": 1283,
+                  "landed": 708,
+                  "missed": 575,
+                  "accuracy": 55.18316445830086
+                },
+                "rounds": {
+                  "won": 1,
+                  "lost": 0,
+                  "tied": 0
+                },
+                "breakdowns": {
+                  "kills": {
+                    "melee": 4,
+                    "grenades": 4,
+                    "headshots": 37,
+                    "power_weapons": 3
+                  },
+                  "assists": {
+                    "emp": 0,
+                    "driver": 0,
+                    "callouts": 2
+                  }
+                },
+                "kda": 12.33,
+                "kdr": 1.0869565217391304,
+                "score": 6320
+              },
+              "mode": null,
+              "extended": null
+            },
+            "rank": 1,
+            "outcome": "win"
+          }
+        ]
+      },
+      "players": [
+        {
+          "gamertag": "Recolations",
+          "type": "player",
+          "team": {
+            "id": 1,
+            "name": "Cobra",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/cobra.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 11,
+                "deaths": 10,
+                "assists": 9,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 5
+              },
+              "damage": {
+                "taken": 3845,
+                "dealt": 3657
+              },
+              "shots": {
+                "fired": 404,
+                "landed": 195,
+                "missed": 209,
+                "accuracy": 48.26732673267327
+              },
+              "rounds": {
+                "won": 1,
+                "lost": 0,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 1,
+                  "grenades": 0,
+                  "headshots": 9,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": 4,
+              "kdr": 1.1,
+              "score": 1550
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 3,
+          "outcome": "win",
+          "participation": {
+            "joined_in_progress": true,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "SalMizz",
+          "type": "player",
+          "team": {
+            "id": 1,
+            "name": "Cobra",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/cobra.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 9,
+                "deaths": 14,
+                "assists": 3,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 3
+              },
+              "damage": {
+                "taken": 4133,
+                "dealt": 3550
+              },
+              "shots": {
+                "fired": 359,
+                "landed": 194,
+                "missed": 165,
+                "accuracy": 54.038997214484674
+              },
+              "rounds": {
+                "won": 1,
+                "lost": 0,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 1,
+                  "grenades": 1,
+                  "headshots": 7,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 2
+                }
+              },
+              "kda": -4,
+              "kdr": 0.6428571428571429,
+              "score": 1070
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 4,
+          "outcome": "win",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "Daywalker8030",
+          "type": "player",
+          "team": {
+            "id": 1,
+            "name": "Cobra",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/cobra.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 14,
+                "deaths": 10,
+                "assists": 7,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 4
+              },
+              "damage": {
+                "taken": 3405,
+                "dealt": 3446
+              },
+              "shots": {
+                "fired": 232,
+                "landed": 138,
+                "missed": 94,
+                "accuracy": 59.48275862068966
+              },
+              "rounds": {
+                "won": 1,
+                "lost": 0,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 1,
+                  "grenades": 0,
+                  "headshots": 12,
+                  "power_weapons": 2
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": 6.33,
+              "kdr": 1.4,
+              "score": 1750
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 2,
+          "outcome": "win",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "Ayo Mr Hands",
+          "type": "player",
+          "team": {
+            "id": 1,
+            "name": "Cobra",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/cobra.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 16,
+                "deaths": 12,
+                "assists": 7,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 4
+              },
+              "damage": {
+                "taken": 3777,
+                "dealt": 4300
+              },
+              "shots": {
+                "fired": 288,
+                "landed": 181,
+                "missed": 107,
+                "accuracy": 62.84722222222222
+              },
+              "rounds": {
+                "won": 1,
+                "lost": 0,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 1,
+                  "grenades": 3,
+                  "headshots": 9,
+                  "power_weapons": 1
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": 6.33,
+              "kdr": 1.3333333333333333,
+              "score": 1950
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 1,
+          "outcome": "win",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "coolO1blue",
+          "type": "player",
+          "team": {
+            "id": 0,
+            "name": "Eagle",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/eagle.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 11,
+                "deaths": 13,
+                "assists": 2,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 4
+              },
+              "damage": {
+                "taken": 3611,
+                "dealt": 4072
+              },
+              "shots": {
+                "fired": 376,
+                "landed": 164,
+                "missed": 212,
+                "accuracy": 43.61702127659575
+              },
+              "rounds": {
+                "won": 0,
+                "lost": 1,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 2,
+                  "grenades": 1,
+                  "headshots": 7,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": -1.33,
+              "kdr": 0.8461538461538461,
+              "score": 1200
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 6,
+          "outcome": "loss",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "CRZY CLwN13",
+          "type": "player",
+          "team": {
+            "id": 0,
+            "name": "Eagle",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/eagle.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 7,
+                "deaths": 14,
+                "assists": 3,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 4
+              },
+              "damage": {
+                "taken": 3748,
+                "dealt": 2734
+              },
+              "shots": {
+                "fired": 262,
+                "landed": 142,
+                "missed": 120,
+                "accuracy": 54.19847328244275
+              },
+              "rounds": {
+                "won": 0,
+                "lost": 1,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 0,
+                  "grenades": 0,
+                  "headshots": 7,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": -6,
+              "kdr": 0.5,
+              "score": 850
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 8,
+          "outcome": "loss",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "lxx SaGe xxl",
+          "type": "player",
+          "team": {
+            "id": 0,
+            "name": "Eagle",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/eagle.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 11,
+                "deaths": 9,
+                "assists": 5,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 2
+              },
+              "damage": {
+                "taken": 3182,
+                "dealt": 3438
+              },
+              "shots": {
+                "fired": 441,
+                "landed": 181,
+                "missed": 260,
+                "accuracy": 41.043083900226755
+              },
+              "rounds": {
+                "won": 0,
+                "lost": 1,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 2,
+                  "grenades": 0,
+                  "headshots": 7,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": 3.66,
+              "kdr": 1.2222222222222223,
+              "score": 1350
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 6,
+          "outcome": "loss",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        },
+        {
+          "gamertag": "Kanxkii",
+          "type": "player",
+          "team": {
+            "id": 0,
+            "name": "Eagle",
+            "emblem_url": "https://assets.halo.autocode.gg/images/infinite/teams/eagle.png"
+          },
+          "stats": {
+            "core": {
+              "summary": {
+                "kills": 17,
+                "deaths": 14,
+                "assists": 5,
+                "betrayals": 0,
+                "suicides": 0,
+                "vehicles": {
+                  "destroys": 0,
+                  "hijacks": 0
+                },
+                "medals": 2
+              },
+              "damage": {
+                "taken": 4734,
+                "dealt": 4604
+              },
+              "shots": {
+                "fired": 494,
+                "landed": 270,
+                "missed": 224,
+                "accuracy": 54.655870445344135
+              },
+              "rounds": {
+                "won": 0,
+                "lost": 1,
+                "tied": 0
+              },
+              "breakdowns": {
+                "kills": {
+                  "melee": 0,
+                  "grenades": 1,
+                  "headshots": 14,
+                  "power_weapons": 0
+                },
+                "assists": {
+                  "emp": 0,
+                  "driver": 0,
+                  "callouts": 0
+                }
+              },
+              "kda": 4.66,
+              "kdr": 1.2142857142857142,
+              "score": 1950
+            },
+            "mode": null,
+            "extended": null
+          },
+          "rank": 5,
+          "outcome": "loss",
+          "participation": {
+            "joined_in_progress": false,
+            "presence": {
+              "beginning": true,
+              "completion": true
+            }
+          }
+        }
+      ],
+      "experience": "arena",
+      "played_at": "2021-12-19T15:31:45.646Z",
+      "duration": {
+        "seconds": 533,
+        "human": "00h 08m 53s"
+      }
+    }
+  }
