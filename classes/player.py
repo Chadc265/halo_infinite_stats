@@ -62,7 +62,7 @@ class PlayerMatchStats:
         self.scoreboard_rank = data['rank']
         mode_data = data['stats'].get('mode', None)
         self.mode_stats = None
-        if mode_data is None:
+        if mode_data is not None:
             if 'oddballs' in mode_data:
                 self.mode_stats = OddballStats(mode_data)
             elif 'zones' in mode_data:

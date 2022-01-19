@@ -6,7 +6,7 @@ class PlaylistData:
         self.name = data.get('name', None)
         self.queue = data.get('properties', {}).get('queue', None)
         self.input = data.get('properties', {}).get('input', None)
-        self.ranked = data.get('properties', {}).get('ranked', None)
+        self.ranked = data.get('properties', {}).get('ranked', False)
         self.id = data.get('asset', {}).get('id', None)
         self.version = data.get('asset', {}).get('version', None)
 
@@ -60,14 +60,14 @@ class Match:
         }
         return {**low_dict}
 
-    def to_dict(self):
+    def to_dict(self, include_mode:bool=False):
         """
         Returns list of dictionaries with info_dict and a single player in each
         """
         info_dict = self.get_info_dict()
         ret = []
         for p in self.players:
-            ret.append({**info_dict, **p.to_dict()})
+            ret.append({**info_dict, **p.to_dict(include_mode)})
         return ret
 
 

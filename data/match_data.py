@@ -3,6 +3,7 @@ from .api_calls import get_match_list_json, get_single_match_json, \
 from classes import MatchListResult, Match
 from tqdm import tqdm
 import numpy as np
+import json
 
 __all__ = [
     "get_match_id_list",
@@ -46,11 +47,17 @@ def get_single_player_matches(offset_list, api_token, gamertag) -> list[Match]:
 def get_specified_matches(
         match_id_list,
         api_token,
-        ignore_match_gamertags=None) -> list[Match]:
+        ignore_match_gamertags=None,
+        save_json_dir:str=None) -> list[Match]:
 
     match_list = []
     for mid in tqdm(match_id_list, desc='match list', unit='match'):
         match_result = get_single_match_json(mid, api_token)
+
+        if save_json_dir is not None:
+            with open(save_json_dir + mid + '.json', 'x') as f:
+                json.dump(match_result, f)
+
         match_obj = Match(match_result['data'])
         if len(ignore_match_gamertags) > 0:
             match_names = [x.gamer_tag for x in match_obj.players]
@@ -59,8 +66,8 @@ def get_specified_matches(
         match_list.append(match_obj)
     return match_list
 
-def matches_to_dict_list(match_list: list[Match]) -> list[dict]:
+def matches_to_dict_list(match_list: list[Match], include_mode:bool=False) -> list[dict]:
     dict_list = []
     for m in match_list:
-        dict_list.extend(m.to_dict())
+        dict_list.extend(m.to_dict(include_mode))
     return dict_list
