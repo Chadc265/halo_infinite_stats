@@ -1,3 +1,5 @@
+import datetime
+from .game_mode import OddballStats, ZoneStats, FlagStats
 ONYX_START = 1500
 
 def get_onyx_sub_tier(csr):
@@ -27,11 +29,13 @@ class ShotStats:
         self.accuracy = data.get('accuracy', 0)
 
 class KillStats:
-    def __init__(self, data:dict):
-        self.melee_kills = data.get('melee', 0)
-        self.grenade_kills = data.get('grenades', 0)
-        self.headshots = data.get('headshots', 0)
-        self.power_weapon_kills = data.get('power_weapons', 0)
+    def __init__(self, kill_breakdown_data:dict, assist_breakdown_data:dict={}):
+        self.melee_kills = kill_breakdown_data.get('melee', 0)
+        self.grenade_kills = kill_breakdown_data.get('grenades', 0)
+        self.headshots = kill_breakdown_data.get('headshots', 0)
+        self.power_weapon_kills = kill_breakdown_data.get('power_weapons', 0)
+        self.emp_assists = assist_breakdown_data.get('emp', 0)
+        self.callout_assists = assist_breakdown_data.get('callouts', 0)
 
 class TeamMetricStats:
     def __init__(self, player_summary_stats, team:str):
@@ -56,15 +60,23 @@ class PlayerMatchStats:
         self.team = data.get('team', {}).get('name', 'null').lower()
         self.outcome = data['outcome']
         self.scoreboard_rank = data['rank']
-        self.mode_stats = data['stats'].get('mode', None)
-        if self.mode_stats is None:
-            self.mode_stats = {}
+        mode_data = data['stats'].get('mode', None)
+        self.mode_stats = None
+        if mode_data is None:
+            if 'oddballs' in mode_data:
+                self.mode_stats = OddballStats(mode_data)
+            elif 'zones' in mode_data:
+                self.mode_stats = ZoneStats(mode_data)
+            elif 'flags' in mode_data:
+                self.mode_stats = FlagStats(mode_data)
 
         core_data = data['stats'].get('core', {})
         self.summary_stats = SummaryStats(core_data.get('summary', {}))
         self.damage_stats = DamageStats(core_data.get('damage', {}))
         self.shot_stats = ShotStats(core_data.get('shots', {}))
-        self.kill_stats = KillStats(core_data.get('breakdowns', {}).get('kills', {}))
+
+        breakdown_data = core_data.get('breakdowns', {})
+        self.kill_stats = KillStats(breakdown_data.get('kills', {}), breakdown_data.get('assists', {}))
 
         self.kda = core_data.get('kda', 0.0)
         self.kdr = core_data.get('kdr', 0.0)
@@ -75,8 +87,21 @@ class PlayerMatchStats:
         self.before_csr, self.before_rank = self._parse_csr_tier(pre_match_prog)
         self.after_csr, self.after_rank = self._parse_csr_tier(post_match_prog)
 
-        self.match_completed = data.get('participation', {}).get('presence', {}).get('completion', None)
+        participation_data = data.get('participation', {})
+        self.join_time, self.leave_time, self.match_completed = self._parse_participation_data(participation_data)
 
+    @staticmethod
+    def _parse_participation_data(participation_data):
+        match_completed = participation_data.get('presence', {}).get('completion', None)
+        join_time = participation_data.get('joined_at', None)
+        leave_time = participation_data.get('left_at', None)
+        if join_time is not None:
+            join_time = datetime.datetime.fromisoformat(join_time[:-1])
+
+        if leave_time is not None:
+            leave_time = datetime.datetime.fromisoformat(leave_time[:-1])
+
+        return join_time, leave_time, match_completed
 
     @staticmethod
     def _parse_pre_post_progression(progression_data):
@@ -103,7 +128,7 @@ class PlayerMatchStats:
         else:
             return csr, 'null'
 
-    def to_dict(self):
+    def to_dict(self, include_mode=False):
         low_dict = {
             'gamer_tag': self.gamer_tag,
             'player_match_id': self.match_id,
@@ -119,7 +144,20 @@ class PlayerMatchStats:
             'after_rank': self.after_rank,
             'match_completed': self.match_completed
         }
-        return {**low_dict, **vars(self.summary_stats), **vars(self.damage_stats), **vars(self.shot_stats), **vars(self.kill_stats)}
+        if include_mode:
+            mode_dict = vars(self.mode_stats) if self.mode_stats is not None else {}
+            return {**low_dict,
+                    **vars(self.summary_stats),
+                    **vars(self.damage_stats),
+                    **vars(self.shot_stats),
+                    **vars(self.kill_stats),
+                    **mode_dict}
+        else:
+            return {**low_dict,
+                    **vars(self.summary_stats),
+                    **vars(self.damage_stats),
+                    **vars(self.shot_stats),
+                    **vars(self.kill_stats)}
 
 class PlayerCSRData:
     def __init__(self, player_stats:PlayerMatchStats):

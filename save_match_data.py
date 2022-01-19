@@ -9,7 +9,7 @@ from data import get_api_token, get_offset_array, \
 
 CONFIG_PATH = "C:/Repo/python_config.ini"
 
-def parse_args(args):
+def parse_args(arg):
     parser = argparse.ArgumentParser(description="Save pvp match statistics from Halo API. 25 matches will be \
     returned if less are requested.")
     parser.add_argument("gamertag",
@@ -32,7 +32,7 @@ def parse_args(args):
                         action='store_true',
                         help="Only store stats from 'gamertag' player and not everyone in the lobby")
 
-    return parser.parse_args(args)
+    return parser.parse_args(arg)
 
 
 def fetch_full_match_data(gamer_tag, number_matches=-1, solo=False):
