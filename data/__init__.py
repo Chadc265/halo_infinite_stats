@@ -6,4 +6,4 @@ from .config_helpers import get_api_token, get_known_teammates, \
 
 from .match_data import get_match_id_list, get_offset_array, \
     get_single_player_matches, get_specified_matches, \
-    matches_to_dict_list
+    matches_to_dict_list, get_match_id_list_auto

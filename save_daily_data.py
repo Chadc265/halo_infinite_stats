@@ -5,7 +5,8 @@ import sys
 from classes import Match
 from data import get_api_token, get_offset_array, \
     get_match_id_list, get_specified_matches, \
-    matches_to_dict_list, get_output_directory
+    matches_to_dict_list, get_output_directory, \
+    get_match_id_list_auto
 
 CONFIG_PATH = "C:/Repo/python_config.ini"
 
@@ -16,6 +17,13 @@ def fetch_full_match_data(gamer_tag, number_matches=-1, json_dir:str=None, skip_
     if skip_existing:
         match_ids = remove_stored_matches_from_list(match_ids, json_dir)
     matches = get_specified_matches(match_ids, token, ignore_match_gamertags=[], save_json_dir=json_dir)
+    return matches
+
+def fetch_data_auto_skip(gamer_tag, json_dir:str):
+    token = get_api_token(CONFIG_PATH)
+    offset_array = get_offset_array(token, gamer_tag)
+    match_ids = get_match_id_list_auto(offset_array, token, gamer_tag, json_dir)
+    matches = get_specified_matches(match_ids, token, save_json_dir=json_dir)
     return matches
 
 def remove_stored_matches_from_list(match_ids:list[str], json_dir:str):
@@ -83,13 +91,14 @@ def make_filename(path, date_string):
 if __name__ == '__main__':
     args = parse_args(sys.argv[1:])
     output_dir = get_output_directory(CONFIG_PATH)
-    json_directory = None
-    if args.save_jsons:
-        json_directory = output_dir + "JSON/"
-    match_list = fetch_full_match_data(args.gamertag,
-                                       args.number_matches,
-                                       json_dir=json_directory,
-                                       skip_existing=args.skip_existing)
+    json_directory = output_dir + "JSON/"
+    # if args.save_jsons:
+    #     json_directory = output_dir + "JSON/"
+    # match_list = fetch_full_match_data(args.gamertag,
+    #                                    args.number_matches,
+    #                                    json_dir=json_directory,
+    #                                    skip_existing=args.skip_existing)
+    match_list = fetch_data_auto_skip(args.gamertag, json_directory)
     daily_matches = split_matches_by_date(match_list)
 
-    write_to_files(daily_matches, output_dir + "All/")
+    write_to_files(daily_matches, output_dir + "New/")

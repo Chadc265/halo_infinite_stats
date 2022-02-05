@@ -57,7 +57,9 @@ class PlayerMatchStats:
     def __init__(self, data:dict, match_id:str, gamer_tag=None):
         self.gamer_tag = data.get('gamertag', gamer_tag)
         self.match_id=match_id
-        self.team = data.get('team', {}).get('name', 'null').lower()
+        team_data = data.get('team', {})
+        self.team = team_data.get('name', 'null').lower()
+        self.team_mmr = team_data.get('skill', {}).get('mmr', -1)
         self.outcome = data['outcome']
         self.scoreboard_rank = data['rank']
         mode_data = data['stats'].get('mode', None)
@@ -133,6 +135,7 @@ class PlayerMatchStats:
             'gamer_tag': self.gamer_tag,
             'player_match_id': self.match_id,
             'team': self.team,
+            'team_mmr': self.team_mmr,
             'outcome': self.outcome,
             'scoreboard_rank': self.scoreboard_rank,
             'kda': self.kda,
