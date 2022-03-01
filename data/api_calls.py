@@ -6,7 +6,7 @@ __all__ = [
     "get_pvp_matches_played"
 ]
 
-API_VERSION = "0.3.8"
+API_VERSION = "0.3.9"
 
 
 def get_single_match_json(match_id:str, token:str):
